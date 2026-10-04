@@ -295,15 +295,23 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('is-revealed');
-            observer.unobserve(entry.target); // Animate once only for max performance
+            observer.unobserve(entry.target);
           }
         });
       }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -20px 0px'
       });
 
-      revealElements.forEach(el => revealObserver.observe(el));
+      // Immediate check for elements already in view upon load / refresh
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          setTimeout(() => el.classList.add('is-revealed'), 60);
+        } else {
+          revealObserver.observe(el);
+        }
+      });
     }
   });
 

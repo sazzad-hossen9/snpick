@@ -45,11 +45,6 @@
   display: flex;
   align-items: center;
   height: 38px;
-  transition: transform var(--transition-fast);
-}
-
-.header-brand:hover {
-  transform: scale(1.02);
 }
 
 .brand-logo-svg {
@@ -256,12 +251,6 @@
   aspect-ratio: 16 / 9;
   background-color: var(--bg-muted);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.hero-image-wrap:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 .hero-image-wrap img,
@@ -269,12 +258,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.hero-image-wrap:hover img,
-.hero-image-wrap:hover svg {
-  transform: scale(1.015);
 }
 
 .hero-content .badge {
@@ -410,11 +393,6 @@
 .article-card {
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-normal);
-}
-
-.article-card:hover {
-  transform: translateY(-4px);
 }
 
 .card-thumb {
@@ -432,12 +410,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.article-card:hover .card-thumb img,
-.article-card:hover .card-thumb svg {
-  transform: scale(1.03);
 }
 
 .card-content {
@@ -653,11 +625,11 @@
   grid-template-columns: 200px 1fr;
   gap: 20px;
   align-items: center;
-  transition: transform var(--transition-fast);
 }
 
-.opinion-item:hover {
-  transform: translateX(4px);
+.opinion-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
 }
 
 .opinion-thumb {
@@ -673,12 +645,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.opinion-item:hover .opinion-thumb img,
-.opinion-item:hover .opinion-thumb svg {
-  transform: scale(1.04);
 }
 
 .opinion-content .card-title {
@@ -1062,11 +1028,6 @@
   grid-template-columns: 200px 1fr;
   gap: 24px;
   align-items: center;
-  transition: transform var(--transition-fast);
-}
-
-.stream-item:hover {
-  transform: translateX(4px);
 }
 
 .stream-thumb {
@@ -1082,12 +1043,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.stream-item:hover .stream-thumb img,
-.stream-item:hover .stream-thumb svg {
-  transform: scale(1.04);
 }
 
 /* Pagination */
@@ -1566,4 +1521,53 @@
     transform: none !important;
   }
 }
+
+/* --- 17. Page Load & Refresh Entrance Animation System --- */
+@keyframes entranceHeader {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entranceFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-header {
+  animation: entranceHeader 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ticker-strip {
+  animation: entranceFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both;
+}
+
+.ad-leaderboard {
+  animation: entranceFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.hero-main,
+.section-header-banner,
+.article-header-wrap,
+.about-hero-grid {
+  animation: entranceFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+.most-read-col,
+.section-sidebar,
+.article-sidebar {
+  animation: entranceFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
+}
+
 
