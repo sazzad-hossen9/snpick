@@ -248,12 +248,62 @@
       });
     }
 
+    // --- 7b. Active Navigation Link Sync & Click Transition ---
+    const pathSegments = window.location.pathname.split('/');
+    const currentFileName = pathSegments[pathSegments.length - 1] || 'index.html';
+
+    const allDesktopNavLinks = document.querySelectorAll('.main-nav .nav-link');
+    const allMobileNavLinks = document.querySelectorAll('.mobile-nav-links .mobile-nav-link');
+
+    if (currentFileName && currentFileName !== 'index.html' && currentFileName !== 'about.html') {
+      [allDesktopNavLinks, allMobileNavLinks].forEach(linkGroup => {
+        linkGroup.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === currentFileName) {
+            link.classList.add('active');
+          } else if (currentFileName !== 'article.html') {
+            link.classList.remove('active');
+          }
+        });
+      });
+    } else if (currentFileName === 'index.html' || currentFileName === 'about.html') {
+      [allDesktopNavLinks, allMobileNavLinks].forEach(linkGroup => {
+        linkGroup.forEach(link => link.classList.remove('active'));
+      });
+    }
+
+    // Immediate active highlight on click
+    allDesktopNavLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        allDesktopNavLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
     // --- 8. Dynamic Date on Top Bar ---
     const liveDateEl = document.getElementById('live-date');
     if (liveDateEl) {
       const now = new Date();
       const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
       liveDateEl.textContent = now.toLocaleDateString('en-US', options);
+    }
+
+    // --- 9. Scroll Reveal Animations (IntersectionObserver) ---
+    const revealElements = document.querySelectorAll('.reveal-up');
+    if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            observer.unobserve(entry.target); // Animate once only for max performance
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
     }
   });
 

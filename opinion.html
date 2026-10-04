@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About snpick — Mission, Standards & Editorial Principles</title>
-  <meta name="description" content="snpick picks the world stories that matter, checks them against primary sources, and asks what news actually means.">
+  <title>Opinion & Editorial Commentary — snpick</title>
+  <meta name="description" content="Sharp perspectives, moral clarity, human rights, and uncompromised editorial analysis.">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
@@ -32,14 +32,14 @@
         </svg>
       </a>
 
-      <!-- Desktop Nav Links (Exact 6 category links as in photo_2026-10-04_13-10-35 (3).jpg) -->
+      <!-- Desktop Nav Links with Active State on Opinion -->
       <nav class="main-nav" aria-label="Primary Navigation">
         <a href="world.html" class="nav-link">World</a>
         <a href="section.html" class="nav-link">Middle East</a>
         <a href="asia.html" class="nav-link">Asia</a>
         <a href="economy.html" class="nav-link">Economy</a>
         <a href="climate.html" class="nav-link">Climate</a>
-        <a href="opinion.html" class="nav-link">Opinion</a>
+        <a href="opinion.html" class="nav-link active">Opinion</a>
       </nav>
 
       <div class="header-actions">
@@ -58,7 +58,7 @@
           </span>
         </button>
 
-        <a href="#newsletter" class="btn-subscribe">Subscribe</a>
+        <a href="#newsletter-side" class="btn-subscribe">Subscribe</a>
 
         <button class="btn-icon menu-toggle" aria-label="Open navigation menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -71,7 +71,7 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer -->
+  <!-- Mobile Navigation Drawer -->
   <div id="mobile-drawer" class="mobile-nav-drawer" aria-hidden="true">
     <button id="mobile-close-btn" class="btn-icon" style="position: absolute; top: 20px; right: 20px;" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -85,125 +85,157 @@
       <a href="asia.html" class="mobile-nav-link">Asia</a>
       <a href="economy.html" class="mobile-nav-link">Economy</a>
       <a href="climate.html" class="mobile-nav-link">Climate</a>
-      <a href="opinion.html" class="mobile-nav-link">Opinion</a>
+      <a href="opinion.html" class="mobile-nav-link active">Opinion</a>
     </div>
   </div>
 
   <main class="container">
-    <!-- About Hero Section -->
-    <section class="about-hero-grid" aria-label="About snpick Manifesto">
-      <div>
-        <div class="section-story-count">About snpick</div>
-        <h1 class="about-headline">Knowing the news isn't the same as understanding it.</h1>
-        <p class="about-desc">
-          snpick picks the world stories that matter, checks them against primary sources, and asks the question most coverage skips — what does this actually mean?
-        </p>
-        <div class="about-cta-row">
-          <a href="#newsletter" class="btn-subscribe">Get The Morning Pick</a>
-          <a href="#manifesto" class="btn-secondary">Editorial policy</a>
-        </div>
-      </div>
+    <!-- Section Header Banner -->
+    <section class="section-header-banner">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="opinion.html">Sections</a>
+      </nav>
 
-      <div>
-        <div style="border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 6/5; box-shadow: var(--shadow-sm);">
-          <img src="assets/images/graphic-about.svg" alt="Abstract editorial artwork" width="600" height="500">
-        </div>
-      </div>
-    </section>
+      <div class="section-story-count">Section · 28 Stories</div>
+      <h1 class="section-big-title">Opinion</h1>
+      <p class="section-description">
+        Sharp perspectives, moral clarity, human rights, and uncompromised editorial analysis.
+      </p>
 
-    <!-- How We Work (3 Pillars) -->
-    <section aria-label="How we work">
-      <div class="section-title-wrap">
-        <h2 class="section-title">How we work</h2>
-      </div>
-
-      <div class="pillars-grid">
-        <!-- Pillar 1 -->
-        <div>
-          <div class="pillar-num">01</div>
-          <h3 class="pillar-title">We pick</h3>
-          <p class="pillar-desc">
-            From hundreds of international stories a day, we choose the few that shape people's lives — not the ones that trend.
-          </p>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div>
-          <div class="pillar-num">02</div>
-          <h3 class="pillar-title">We check</h3>
-          <p class="pillar-desc">
-            Every claim is traced to a primary source. Every story ends with its sources listed — so you can check them too.
-          </p>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div>
-          <div class="pillar-num">03</div>
-          <h3 class="pillar-title">We take a stand</h3>
-          <p class="pillar-desc">
-            We don't pretend to be neutral. We write for human rights, fairness and accountability — and always label opinion as opinion.
-          </p>
-        </div>
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs" role="tablist" aria-label="Filter stories by type">
+        <button class="filter-btn active" data-filter="all" role="tab">All</button>
+        <button class="filter-btn" data-filter="opinion" role="tab">Opinion</button>
+        <button class="filter-btn" data-filter="analysis" role="tab">Analysis</button>
       </div>
     </section>
 
-    <!-- Why this blog exists & Author Profile -->
-    <section id="manifesto" class="about-manifesto-grid" aria-label="Why this blog exists">
-      <div>
-        <div class="section-title-wrap">
-          <h2 class="section-title">Why this blog exists</h2>
-        </div>
-        <div style="font-family: var(--font-serif); font-size: 1.1875rem; line-height: 1.75; color: var(--text-body);">
-          <p style="margin-bottom: 20px;">
-            International news usually arrives stripped of context. A war, an election or a trade deal gets a headline — but the thread connecting it to prices, jobs, migration and security at home gets lost.
-          </p>
-          <p style="margin-bottom: 24px;">
-            snpick exists to rebuild that thread. It's a blog, not a newspaper — but it follows a newsroom's rules on sourcing and corrections.
-          </p>
-          <p style="font-family: var(--font-sans); font-size: 0.9375rem; font-weight: 700;">
-            <a href="mailto:corrections@snpick.com" style="color: var(--accent-orange); text-decoration: underline; text-underline-offset: 4px;">Found an error? Tell us</a>
-            <span style="color: var(--text-secondary); font-weight: 500;"> — every correction is published with a date.</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Author Card -->
-      <div>
-        <div class="author-card" style="margin-top: 48px;">
-          <img src="assets/images/author-mosharaf.svg" alt="Mosharaf" class="author-card-avatar" width="64" height="64">
-          <div>
-            <div class="author-card-label">Author</div>
-            <h3 class="author-card-name">Mosharaf</h3>
-            <p class="author-card-bio">
-              Writes on international politics and economics, and on what global events mean for readers in South Asia and beyond.
+    <!-- Main Layout: Stream + Sidebar -->
+    <div class="category-stream-layout">
+      <!-- Story Stream List -->
+      <div class="stream-list">
+        <!-- Item 1: Opinion -->
+        <article class="stream-item" data-type="opinion">
+          <a href="article.html?id=refugee-repatriation" class="stream-thumb">
+            <img src="assets/images/graphic-sudan.svg" alt="Refugee repatriation" width="600" height="400">
+          </a>
+          <div class="stream-content">
+            <div class="card-badges">
+              <span class="badge"><span class="badge-dot"></span> Opinion · Asia</span>
+            </div>
+            <h2 class="card-title">
+              <a href="article.html?id=refugee-repatriation">The question nobody is asking in refugee repatriation talks</a>
+            </h2>
+            <p class="card-excerpt">
+              Without guarantees of safety and citizenship, return is a photo opportunity, not a policy.
             </p>
-            <a href="section.html" class="author-card-link">All stories (48) →</a>
+            <div class="card-meta">Sep 26 · 5 min read</div>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
 
-    <!-- The Morning Pick Newsletter Box -->
-    <section id="newsletter" class="newsletter-banner" aria-label="Newsletter">
-      <div class="newsletter-info">
-        <div class="newsletter-tag">The Morning Pick · Free</div>
-        <h2 class="newsletter-heading">Too much news. Too little time to understand it.</h2>
-        <p class="newsletter-sub">
-          Every morning at 7: the five world stories that matter — what happened, why it matters, and what comes next. Done in five minutes.
-        </p>
-      </div>
-      <div class="newsletter-form-box">
-        <form class="newsletter-form newsletter-form-element">
-          <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email address">
-          <button type="submit" class="newsletter-btn">Subscribe free</button>
-        </form>
-        <div class="newsletter-trust">
-          <span>✓ No spam</span>
-          <span>✓ One-click unsubscribe</span>
-          <span>12,400+ readers</span>
+        <!-- Item 2: Opinion / Analysis -->
+        <article class="stream-item" data-type="analysis">
+          <a href="article.html?id=sudan-displacement" class="stream-thumb">
+            <img src="assets/images/graphic-sudan.svg" alt="Sudan displacement moral crisis" width="600" height="400">
+          </a>
+          <div class="stream-content">
+            <div class="card-badges">
+              <span class="badge"><span class="badge-dot"></span> Analysis · Africa</span>
+            </div>
+            <h2 class="card-title">
+              <a href="article.html?id=sudan-displacement">Sudan's war: why the world's largest displacement isn't making headlines</a>
+            </h2>
+            <p class="card-excerpt">
+              How media attention gets rationed — and what that costs in human terms.
+            </p>
+            <div class="card-meta">Sep 26 · 6 min read</div>
+          </div>
+        </article>
+
+        <!-- In-Stream Ad Slot -->
+        <div class="ad-slot" style="min-height: 140px; margin: 10px 0;" role="complementary" aria-label="Stream Advertisement">
+          <span class="ad-label">Advertisement</span>
+          <span class="ad-brand">AdSense</span>
+          <span class="ad-dimensions">300×250 · 336×280</span>
         </div>
+
+        <!-- Item 3: Analysis -->
+        <article class="stream-item" data-type="analysis">
+          <a href="article.html" class="stream-thumb">
+            <img src="assets/images/graphic-redsea.svg" alt="Red Sea consumer crisis" width="600" height="400">
+          </a>
+          <div class="stream-content">
+            <div class="card-badges">
+              <span class="badge"><span class="badge-dot"></span> Analysis · Middle East</span>
+            </div>
+            <h2 class="card-title">
+              <a href="article.html">Why a shipping crisis in the Red Sea ends up on your grocery bill</a>
+            </h2>
+            <p class="card-excerpt">
+              Longer routes mean higher freight and insurance — and consumers pay last. The whole supply chain, in one place.
+            </p>
+            <div class="card-meta">Sep 26 · 8 min read</div>
+          </div>
+        </article>
+
+        <!-- Pagination -->
+        <nav class="pagination-wrap" aria-label="Stories pagination">
+          <button class="page-btn active" aria-current="page">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-next-btn">
+            Next page
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </nav>
       </div>
-    </section>
+
+      <!-- Right Sidebar -->
+      <aside class="section-sidebar" aria-label="Section sidebar">
+        <div id="newsletter-side" class="sidebar-newsletter">
+          <div class="newsletter-heading">The Morning Pick</div>
+          <p class="newsletter-sub">Five world stories that matter, in five minutes. Every day at 7 AM.</p>
+          <form class="newsletter-form-element">
+            <input type="email" class="newsletter-input" placeholder="Your email" required style="width: 100%; margin-bottom: 8px;">
+            <button type="submit" class="newsletter-btn" style="width: 100%;">Subscribe free</button>
+          </form>
+        </div>
+
+        <h3 class="most-read-header">Most read</h3>
+        <div class="most-read-list">
+          <article class="most-read-item">
+            <span class="most-read-num">1</span>
+            <div class="most-read-body">
+              <span class="most-read-tag">Asia</span>
+              <h4 class="most-read-title">
+                <a href="article.html?id=refugee-repatriation">The question nobody is asking in refugee repatriation talks</a>
+              </h4>
+            </div>
+          </article>
+
+          <article class="most-read-item">
+            <span class="most-read-num">2</span>
+            <div class="most-read-body">
+              <span class="most-read-tag">Africa</span>
+              <h4 class="most-read-title">
+                <a href="article.html?id=sudan-displacement">Sudan's war: why the world's largest displacement isn't making headlines</a>
+              </h4>
+            </div>
+          </article>
+        </div>
+
+        <div class="ad-slot ad-halfpage" role="complementary" aria-label="Sidebar Ad">
+          <span class="ad-label">Advertisement</span>
+          <span class="ad-brand">AdSense</span>
+          <span class="ad-dimensions">300×600</span>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <!-- Site Footer -->
@@ -221,7 +253,7 @@
           <p class="footer-desc">
             World news, picked and explained — with context, sources and a clear point of view. Because knowing the news and understanding it are not the same thing.
           </p>
-          <a href="#newsletter" class="btn-subscribe" style="align-self: flex-start;">Get The Morning Pick</a>
+          <a href="index.html#newsletter" class="btn-subscribe" style="align-self: flex-start;">Get The Morning Pick</a>
         </div>
 
         <div>
