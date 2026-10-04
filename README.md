@@ -2,7 +2,7 @@
 
 > A modern, responsive editorial news & deep-dive analysis website built with semantic **HTML5**, modern **Vanilla CSS3**, and **Vanilla JavaScript (ES6+)**. Features seamless **Light & Dark Mode** switching, real-time article search with keyboard shortcuts, and interactive editorial widgets.
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live%20Preview-FA4616?style=for-the-badge&logo=github)](https://sazzad-hossen9.github.io/smpick/)
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Preview-FA4616?style=for-the-badge&logo=github)](https://sazzad-hossen9.github.io/snpick/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
@@ -16,6 +16,10 @@
   - **Light Mode**: Warm, editorial paper aesthetics (`#FAF8F5`) inspired by modern journalism publications (*The Verge*, *Semafor*, *Rest of World*).
   - **Dark Mode**: High-contrast, OLED-friendly matte black theme (`#0E0E10`).
   - Seamless toggle with state persisted in `localStorage` and automatic OS system theme detection (`prefers-color-scheme`).
+- 🧭 **Interactive Animated Navigation**:
+  - Smooth underline hover expansion across all category links.
+  - Active page retention (current page stays highlighted with a crisp solid underline).
+  - Dedicated pages for all 6 categories: **World**, **Middle East**, **Asia**, **Economy**, **Climate**, and **Opinion**.
 - ⚡ **Instant Live Search (`Ctrl + K` / `Cmd + K`)**:
   - Modal overlay with real-time story, topic, and author searching with matched query highlighting.
 - 📱 **100% Fully Responsive Layout**:
@@ -28,7 +32,7 @@
   - Sourced citations list and interactive topic tags.
   - Author bio cards and "Read next" article recommendations.
 - 🏷️ **Dynamic Category Filtering**:
-  - Live filtering tabs on the section page (`All`, `Analysis`, `Opinion`, `Explainer`).
+  - Live filtering tabs on section pages (`All`, `Analysis`, `Opinion`, `Explainer`).
 - 📬 **Interactive Newsletter Widget**:
   - Client-side validation and toast notifications for "The Morning Pick" daily newsletter.
 - 🔗 **Social & Engagement Actions**:
@@ -42,11 +46,16 @@
 ## 📂 Project Structure
 
 ```
-smpick/
+snpick/
 │
 ├── index.html               # Homepage (Hero story, Ticker, Latest Analysis, Newsletter, Opinion)
+├── world.html               # World Category Page (Diplomacy, Security, Governance stream)
+├── section.html             # Middle East Category Page (64 Stories, Filter Tabs, Sidebar)
+├── asia.html                # Asia Category Page (Geopolitics, Tech hubs, Regional trade)
+├── economy.html             # Economy Category Page (Markets, Central Banks, Remittances)
+├── climate.html             # Climate Category Page (Energy transition, Loss & Damage finance)
+├── opinion.html             # Opinion & Essays (Columns, Editorial voices, Author cards)
 ├── article.html             # Article details page (Takeaways, Content, Author bio, Read next)
-├── section.html             # Category / Sections page (Middle East, Filters, Pagination)
 ├── about.html               # About snpick (Mission, 3 Pillars of Work, Editorial Policy)
 │
 ├── css/
@@ -72,8 +81,8 @@ Because this project is built with clean vanilla web standards, you don't need N
 
 1. Clone or download the repository:
    ```bash
-   git clone https://github.com/sazzad-hossen9/smpick.git
-   cd smpick
+   git clone https://github.com/sazzad-hossen9/snpick.git
+   cd snpick
    ```
 2. Simply double-click **`index.html`** in your file manager to open it in any web browser.
 3. Or open with VS Code's **Live Server** extension for live reloading.
@@ -92,12 +101,12 @@ git push -u origin main
 ```
 
 ### Step 2: Enable Free Live Hosting on GitHub Pages
-1. Go to your repository on GitHub: **https://github.com/sazzad-hossen9/smpick**
+1. Go to your repository on GitHub: **https://github.com/sazzad-hossen9/snpick**
 2. Click **Settings** (top tab) → **Pages** (left sidebar).
 3. Under **Branch**, select `main` and root `/ (root)`.
 4. Click **Save**.
 5. Your live portfolio website will be ready in under 1 minute at:
-   👉 **`https://sazzad-hossen9.github.io/smpick/`**
+   👉 **`https://sazzad-hossen9.github.io/snpick/`**
 
 ---
 
