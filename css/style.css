@@ -1,102 +1,118 @@
 /* ==========================================================================
-   smpick - Editorial News & Analysis Publication Design System
+   snpick — Precision Design System & Theme Engine
+   Faithfully crafted to match 1:1 with editorial designs in /design
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
 
-/* --- Root Variables: Light Theme (Default) --- */
+/* --- Light Mode Tokens (Default) --- */
 :root {
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-serif: 'Newsreader', Georgia, serif;
+  --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
 
-  /* Color Palette - Light Editorial Paper */
-  --bg-body: #FAF8F5;
+  /* Editorial Paper Colors */
+  --bg-page: #FAF8F5;
   --bg-header: #FAF8F5;
-  --bg-surface: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-muted: #F3EFE7;
-  --bg-newsletter: #FEEFE7;
+  --bg-muted: #F4F1EA;
+  --bg-newsletter: #FEECE3;
   --bg-footer: #F2ECE3;
   --bg-input: #FFFFFF;
+  --bg-ad: #EFEBE3;
 
-  --text-primary: #121214;
-  --text-secondary: #484850;
-  --text-muted: #747480;
+  /* Artwork Card Bgs */
+  --art-bg-redsea: #F5F1E8;
+  --art-bg-climate: #FEECE2;
+  --art-bg-rate: #F7F3EA;
+  --art-bg-ai: #FEECE2;
+  --art-bg-dark: #161619;
+  --art-bg-about: #FEECE2;
+
+  /* Typography Colors */
+  --text-main: #111113;
+  --text-body: #2C2C32;
+  --text-secondary: #55555E;
+  --text-muted: #787884;
   --text-inverse: #FFFFFF;
 
-  --border-color: #E6E2D8;
-  --border-subtle: #EDE9E0;
-  --border-strong: #121214;
-
+  /* Editorial Accent Orange */
   --accent-orange: #FA4616;
   --accent-orange-hover: #E03B0F;
   --accent-orange-subtle: #FFF0E8;
   --accent-orange-border: #FCD5C3;
 
-  --badge-bg: #EAE6DD;
-  --badge-text: #18181B;
+  /* Borders & Dividers */
+  --border-color: #E6E2D8;
+  --border-subtle: #EDE9E0;
+  --border-dark: #111113;
 
-  --ad-bg: #EFEBE3;
-  --ad-text: #8E8A82;
+  /* Badges & Pills */
+  --badge-bg: #EAE5DC;
+  --badge-text: #111113;
+  --badge-border: #DCD7CD;
 
-  --card-art-climate: #FEEFE7;
-  --card-art-rate: #F7F3EA;
-  --card-art-dark: #151518;
-
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.08);
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.08);
 
   --radius-sm: 4px;
   --radius-md: 8px;
-  --radius-lg: 14px;
+  --radius-lg: 12px;
   --radius-full: 9999px;
 
-  --container-max: 1220px;
-  --transition-theme: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, fill 0.25s ease;
+  --container-width: 1220px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* --- Dark Theme Palette --- */
+/* --- Dark Mode Tokens ([data-theme="dark"]) --- */
 [data-theme="dark"] {
-  --bg-body: #0E0E10;
-  --bg-header: #0E0E10;
-  --bg-surface: #151518;
-  --bg-card: #151518;
-  --bg-muted: #1B1B20;
-  --bg-newsletter: #231713;
+  --bg-page: #111113;
+  --bg-header: #111113;
+  --bg-card: #18181C;
+  --bg-muted: #1A1A1E;
+  --bg-newsletter: #251713;
   --bg-footer: #0A0A0C;
-  --bg-input: #121215;
+  --bg-input: #151518;
+  --bg-ad: #17171A;
 
-  --text-primary: #F4F4F6;
-  --text-secondary: #A3A3AE;
-  --text-muted: #737380;
-  --text-inverse: #0E0E10;
+  /* Artwork Card Bgs in Dark Mode */
+  --art-bg-redsea: #1A1A1E;
+  --art-bg-climate: #251713;
+  --art-bg-rate: #1A1A1E;
+  --art-bg-ai: #251713;
+  --art-bg-dark: #121215;
+  --art-bg-about: #251713;
 
+  /* Typography Colors in Dark Mode */
+  --text-main: #F4F4F6;
+  --text-body: #D1D1D8;
+  --text-secondary: #9E9EA8;
+  --text-muted: #72727E;
+  --text-inverse: #111113;
+
+  /* Borders & Dividers in Dark Mode */
   --border-color: #24242A;
   --border-subtle: #1C1C22;
-  --border-strong: #E5E5EB;
+  --border-dark: #F4F4F6;
+
+  /* Badges & Pills in Dark Mode */
+  --badge-bg: #222228;
+  --badge-text: #F4F4F6;
+  --badge-border: #31313A;
 
   --accent-orange: #FA4616;
   --accent-orange-hover: #FF5A2E;
   --accent-orange-subtle: #2F1912;
   --accent-orange-border: #4D2619;
 
-  --badge-bg: #222228;
-  --badge-text: #E5E5EA;
-
-  --ad-bg: #151518;
-  --ad-text: #61616C;
-
-  --card-art-climate: #231713;
-  --card-art-rate: #1A1A1E;
-  --card-art-dark: #121215;
-
   --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Base Reset & Box Sizing --- */
+/* --- Base & Reset --- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -112,13 +128,13 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-body);
-  color: var(--text-primary);
-  line-height: 1.6;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.55;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: var(--transition-theme);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
 }
 
@@ -130,7 +146,7 @@ img, svg {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.15s ease, opacity 0.15s ease;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 button {
@@ -148,45 +164,30 @@ input {
   font-family: inherit;
 }
 
-/* --- Layout Utility Classes --- */
+/* --- Layout Container --- */
 .container {
   width: 100%;
-  max-width: var(--container-max);
+  max-width: var(--container-width);
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* --- Typography Helpers --- */
-.font-serif {
-  font-family: var(--font-serif);
-}
-
+/* --- Shared Components & Micro-interactions --- */
 .text-orange {
-  color: var(--accent-orange);
+  color: var(--accent-orange) !important;
 }
 
 .text-muted {
   color: var(--text-muted);
 }
 
+/* Badge with Dot */
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-size: 0.6875rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -195,31 +196,26 @@ input {
   border-radius: var(--radius-sm);
   background-color: var(--badge-bg);
   color: var(--badge-text);
-  line-height: 1.2;
+  border: 1px solid var(--badge-border);
+  line-height: 1.25;
+  width: fit-content;
 }
 
 .badge-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color: var(--accent-orange);
   display: inline-block;
+  flex-shrink: 0;
 }
 
-/* --- Divider line --- */
-.divider {
-  height: 1px;
-  background-color: var(--border-color);
-  width: 100%;
-  margin: 24px 0;
-  border: none;
-}
-
+/* Section Header Bar with Orange Dot and Divider */
 .section-title-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--border-color);
 }
@@ -227,16 +223,17 @@ input {
 .section-title {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.25rem;
+  gap: 8px;
+  font-size: 1.1875rem;
   font-weight: 800;
   letter-spacing: -0.02em;
+  color: var(--text-main);
 }
 
 .section-title::before {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background-color: var(--accent-orange);
   display: inline-block;
@@ -245,25 +242,139 @@ input {
 .section-link {
   font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--text-main);
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  transition: color 0.15s ease;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .section-link:hover {
   color: var(--accent-orange);
+  transform: translateX(2px);
 }
 
-/* Reading Progress Bar */
+/* Key Takeaways Callout Box */
+.takeaways-box {
+  background-color: var(--bg-muted);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+
+.takeaways-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.takeaways-title::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+}
+
+.takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.takeaways-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.takeaways-num {
+  font-weight: 800;
+  color: var(--accent-orange);
+  font-size: 0.9375rem;
+}
+
+/* Reading Progress Indicator */
 #reading-progress {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
   height: 3px;
-  background: var(--accent-orange);
-  z-index: 1000;
-  transition: width 0.1s linear;
+  background-color: var(--accent-orange);
+  z-index: 9999;
+  transition: width 0.08s linear;
+}
+
+/* AdSense Placeholder Units */
+.ad-slot {
+  background-color: var(--bg-ad);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-muted);
+  transition: background-color var(--transition-normal);
+  user-select: none;
+}
+
+.ad-label {
+  font-size: 0.5625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 2px;
+  opacity: 0.7;
+}
+
+.ad-brand {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.ad-dimensions {
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.ad-leaderboard {
+  width: 100%;
+  max-width: 970px;
+  height: 90px;
+  margin: 20px auto 32px auto;
+}
+
+.ad-rectangle {
+  width: 100%;
+  max-width: 300px;
+  height: 250px;
+  margin-top: 24px;
+}
+
+.ad-halfpage {
+  width: 100%;
+  min-height: 600px;
+}
+
+.ad-in-article {
+  width: 100%;
+  max-width: 360px;
+  height: 120px;
+  margin: 36px auto;
 }
