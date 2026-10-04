@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="100%" height="100%" fill="none">
+  <!-- Orange dot -->
+  <circle cx="28" cy="38" r="16" fill="#FA4616" />
+  <!-- 'sn' in currentColor (black in light mode, white in dark mode) -->
+  <text x="56" y="52" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="900" letter-spacing="-1.5px" fill="currentColor">sn</text>
+  <!-- 'pick' in brand orange -->
+  <text x="110" y="52" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="900" letter-spacing="-1.5px" fill="#FA4616">pick</text>
+</svg>

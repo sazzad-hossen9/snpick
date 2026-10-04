@@ -1,0 +1,136 @@
+# 📰 `snpick` — World News, Picked & Explained
+
+> A modern, responsive editorial news & deep-dive analysis website built with semantic **HTML5**, modern **Vanilla CSS3**, and **Vanilla JavaScript (ES6+)**. Features seamless **Light & Dark Mode** switching, real-time article search with keyboard shortcuts, and interactive editorial widgets.
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Preview-FA4616?style=for-the-badge&logo=github)](https://YOUR_GITHUB_USERNAME.github.io/smpick/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#)
+
+---
+
+## ✨ Key Features
+
+- 🌓 **Dual Themes (Light & Dark Mode)**:
+  - **Light Mode**: Warm, editorial paper aesthetics (`#FAF8F5`) inspired by modern journalism publications (*The Verge*, *Semafor*, *Rest of World*).
+  - **Dark Mode**: High-contrast, OLED-friendly matte black theme (`#0E0E10`).
+  - Seamless toggle with state persisted in `localStorage` and automatic OS system theme detection (`prefers-color-scheme`).
+- ⚡ **Instant Live Search (`Ctrl + K` / `Cmd + K`)**:
+  - Modal overlay with real-time story, topic, and author searching with matched query highlighting.
+- 📱 **100% Fully Responsive Layout**:
+  - Handcrafted CSS Grid and Flexbox layouts.
+  - Smooth mobile hamburger drawer navigation.
+- 📖 **Editorial Longform Reading Experience**:
+  - Top reading progress indicator bar that updates smoothly as you read.
+  - "Key Takeaways" quick summary box.
+  - Pull quotes with brand signature accent border.
+  - Sourced citations list and interactive topic tags.
+  - Author bio cards and "Read next" article recommendations.
+- 🏷️ **Dynamic Category Filtering**:
+  - Live filtering tabs on the section page (`All`, `Analysis`, `Opinion`, `Explainer`).
+- 📬 **Interactive Newsletter Widget**:
+  - Client-side validation and toast notifications for "The Morning Pick" daily newsletter.
+- 🔗 **Social & Engagement Actions**:
+  - One-click "Copy Share Link" to clipboard with interactive feedback toast.
+  - Toggleable "Bookmark Article" reading list saver.
+- 🚀 **Zero Dependencies**:
+  - 100% pure Vanilla Web Standards. No npm build steps required, loads instantly anywhere!
+
+---
+
+## 📂 Project Structure
+
+```
+smpick/
+│
+├── index.html               # Homepage (Hero story, Ticker, Latest Analysis, Newsletter, Opinion)
+├── article.html             # Article details page (Takeaways, Content, Author bio, Read next)
+├── section.html             # Category / Sections page (Middle East, Filters, Pagination)
+├── about.html               # About snpick (Mission, 3 Pillars of Work, Editorial Policy)
+│
+├── css/
+│   ├── style.css            # Design tokens, CSS variables, typography, reset & base layout
+│   └── components.css       # Header, Cards, Ticker, Newsletter, Modals, Footer, Responsive
+│
+├── js/
+│   ├── data.js              # Centralized news story data store
+│   └── main.js              # Theme engine, Search modal, Reading progress, Toasts, Drawer
+│
+├── assets/
+│   └── images/              # Scalable SVG brand logo and editorial geometric artwork
+│
+├── README.md                # Project documentation and portfolio guide
+└── .gitignore               # Git ignore rules
+```
+
+---
+
+## 🚀 How to Run Locally
+
+Because this project is built with clean vanilla web standards, you don't need Node.js or any compilation!
+
+1. Clone or download the repository:
+   ```bash
+   git clone https://github.com/YOUR_GITHUB_USERNAME/smpick.git
+   cd smpick
+   ```
+2. Simply double-click **`index.html`** in your file manager to open it in any web browser.
+3. Or open with VS Code's **Live Server** extension for live reloading.
+
+---
+
+## 🌐 How to Connect to GitHub & Deploy to GitHub Pages (Portfolio)
+
+Follow these simple steps to make your site accessible worldwide:
+
+### Step 1: Initialize Git and Commit
+```bash
+git init
+git add .
+git commit -m "feat: complete responsive snpick editorial news website"
+```
+
+### Step 2: Create a New GitHub Repository
+1. Go to [GitHub.com/new](https://github.com/new).
+2. Repository name: `smpick`
+3. Visibility: **Public**
+4. Leave other options unchecked, then click **Create repository**.
+
+### Step 3: Push Local Code to GitHub
+```bash
+git branch -M main
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/smpick.git
+git push -u origin main
+```
+
+### Step 4: Enable Free Live Hosting on GitHub Pages
+1. Go to your repository on GitHub.
+2. Click **Settings** (top tab) → **Pages** (left menu).
+3. Under **Branch**, select `main` and root `/ (root)`.
+4. Click **Save**.
+5. Your live portfolio website will be ready in under 2 minutes at:
+   👉 **`https://YOUR_GITHUB_USERNAME.github.io/smpick/`**
+
+---
+
+## 🎨 Color Palette & Typography
+
+| Token | Light Theme | Dark Theme |
+| :--- | :--- | :--- |
+| **Background** | `#FAF8F5` (Paper Cream) | `#0E0E10` (Deep Matte Black) |
+| **Card / Surface** | `#FFFFFF` (Pure White) | `#151518` (Graphite) |
+| **Brand Accent** | `#FA4616` (Editorial Orange) | `#FA4616` (Editorial Orange) |
+| **Text Primary** | `#121214` (Near Black) | `#F4F4F6` (Crisp White) |
+| **Newsletter Box**| `#FEEFE7` (Peach Cream) | `#231713` (Dark Ember) |
+
+**Typography**:
+- **Headings & UI**: `Plus Jakarta Sans` (Google Fonts)
+- **Longform Article Deck & Body**: `Newsreader` (Google Fonts)
+
+---
+
+## 👨‍💻 Author
+
+Crafted for professional web development portfolio demonstration.
+- GitHub: [@YOUR_GITHUB_USERNAME](https://github.com/YOUR_GITHUB_USERNAME)

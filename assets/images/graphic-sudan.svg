@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <pattern id="dot-matrix" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1.2" fill="#FFFFFF" fill-opacity="0.1" />
+    </pattern>
+  </defs>
+  <!-- Dark graphite background -->
+  <rect width="600" height="400" rx="6" fill="#151518"/>
+  <rect width="600" height="400" rx="6" fill="url(#dot-matrix)"/>
+  <!-- Bottom-right orange quarter-circle as in design -->
+  <path d="M 600 270 A 130 130 0 0 0 470 400 L 600 400 Z" fill="#FA4616"/>
+</svg>
