@@ -54,6 +54,16 @@
   applyTheme(initialTheme);
 
   document.addEventListener('DOMContentLoaded', () => {
+    // --- Auto-apply pill styling classes for Explainer / Opinion ---
+    document.querySelectorAll('.type-pill').forEach(pill => {
+      const text = pill.textContent.trim().toUpperCase();
+      if (text.includes('EXPLAINER')) {
+        pill.classList.add('pill-explainer');
+      } else if (text.includes('OPINION')) {
+        pill.classList.add('pill-opinion');
+      }
+    });
+
     // Theme toggle buttons listener
     const themeToggles = document.querySelectorAll('.theme-toggle-btn');
     themeToggles.forEach(btn => {

@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
   <defs>
-    <pattern id="grid-ai" width="18" height="18" patternUnits="userSpaceOnUse">
-      <path d="M 18 0 L 0 0 0 18" fill="none" stroke="#FA4616" stroke-opacity="0.08" stroke-width="1"/>
+    <pattern id="dot-grid-ai" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="1.3" fill="#E4C4B5" fill-opacity="0.8"/>
     </pattern>
   </defs>
-  <rect width="600" height="400" rx="6" fill="#FEEFE7"/>
-  <rect width="600" height="400" rx="6" fill="url(#grid-ai)"/>
-  <!-- Top-left orange quarter-circle as in design -->
-  <path d="M 0 0 L 130 0 A 130 130 0 0 1 0 130 Z" fill="#FA4616"/>
+  <rect width="600" height="400" rx="8" fill="#FEECE2"/>
+  <rect width="600" height="400" rx="8" fill="url(#dot-grid-ai)"/>
+  <path d="M 0 0 L 140 0 A 140 140 0 0 1 0 140 Z" fill="#FA4616"/>
 </svg>
